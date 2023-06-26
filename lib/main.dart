@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(useMaterial3: true),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Welcome to Flutter'),
+          title: const Text('Welcome to Flutter '),
           backgroundColor:Colors.blue
         ),
         body: Container(
