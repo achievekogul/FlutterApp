@@ -23,31 +23,26 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(useMaterial3: true),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Welcome to Flutter'),
+          title: const Text('Welcome to Flutter '),
           backgroundColor:Colors.blue
         ),
-        body: Container(
-          width: double.infinity,
-          padding: const EdgeInsets.all(12),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: const [
-              Text('Flutter - The Complete Guide',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
+        body: SafeArea(
+          child:Row(
+            children: <Widget>[
+              Container(
+                height: 120.0,
+                width: 120.0,
+                color: Colors.blue[50],
               ),
-              SizedBox(height: 16),
-              Text(
-                'Learn Flutter step-by-step, from the ground up.',
-                textAlign: TextAlign.center,
-              ),
-            ],
-          ),
-        ),
+              Container(
+                height: 120.0,
+                width: 120.0,
+                color: Colors.blue[50],
+              )
+            ]
+          )
+
+        )
       ),
     );
   }
