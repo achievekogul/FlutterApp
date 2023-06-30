@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 // With Flutter, you create user interfaces by combining "widgets"
@@ -14,36 +14,42 @@ class MyApp extends StatelessWidget {
   // Again: You'll learn all about that throughout the course!
   @override
   Widget build(BuildContext context) {
-    // Below, a bunch of built-in widgets are used (provided by Flutter)
-    // They will be explained in the next sections
-    // In this course, you will, of course, not just use them a lot but
-    // also learn about many other widgets!
     return MaterialApp(
-      title: 'Flutter First App',
-      theme: ThemeData(useMaterial3: true),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Welcome to Flutter '),
-          backgroundColor:Colors.blue
-        ),
-        body: SafeArea(
-          child:Row(
-            children: <Widget>[
-              Container(
-                height: 120.0,
-                width: 120.0,
-                color: Colors.blue[50],
+        title: 'Flutter First App',
+        theme: ThemeData(useMaterial3: true),
+        home: Scaffold(
+            appBar: AppBar(
+              title: const Text('Flutter layout demo'),
+              backgroundColor: Colors.blue,
+            ),
+            body: Column(
+                children: <Widget>[
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                    child: Text('Test'),
+                    width: double.infinity,
+                    height: double.infinity,
+                    color: Colors.amber[200]),
               ),
-              Container(
-                height: 120.0 ,
-                width: 120.0,
-                color: Colors.blue[50],
-              )
-            ]
-          )
-
-        )
-      ),
-    );
+              Expanded(
+                child: Container(
+                    width: double.infinity,
+                    height: double.infinity,
+                    color: Colors.blue[200]),
+              ),
+              Expanded(
+                child: Container(
+                    width: double.infinity,
+                    height: double.infinity,
+                    color: Colors.purple[200]),
+              ),
+              Expanded(
+                child: Container(
+                    width: double.infinity,
+                    height: double.infinity,
+                    color: Colors.black26),
+              ),
+            ])));
   }
 }
