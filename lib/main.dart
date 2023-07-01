@@ -22,34 +22,56 @@ class MyApp extends StatelessWidget {
               title: const Text('Flutter layout demo'),
               backgroundColor: Colors.blue,
             ),
-            body: Column(
-                children: <Widget>[
+            body: Column(children: <Widget>[
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                    child: Text('Test'),
-                    width: double.infinity,
-                    height: double.infinity,
-                    color: Colors.amber[200]),
+                  width: double.infinity,
+                  height: double.infinity,
+                  color: Colors.amber[200],
+                  child: const Text(
+                    "First Container",
+                    style: TextStyle(fontSize: 25),
+                  ),
+                ),
               ),
               Expanded(
                 child: Container(
-                    width: double.infinity,
-                    height: double.infinity,
-                    color: Colors.blue[200]),
+                  alignment: Alignment.center,
+                  width: double.infinity,
+                  height: double.infinity,
+                  color: Colors.blue[200],
+                  child: const Text(
+                    "Second Container",
+                    style: TextStyle(fontSize: 25),
+                  ),
+                ),
               ),
               Expanded(
                 child: Container(
-                    width: double.infinity,
-                    height: double.infinity,
-                    color: Colors.purple[200]),
+                  alignment: Alignment.center,
+                  width: double.infinity,
+                  height: double.infinity,
+                  color: Colors.purple[200],
+                  child: const Text(
+                    "Third Container",
+                    style: TextStyle(fontSize: 25),
+                  ),
+                ),
               ),
               Expanded(
-                child: Container(
-                    width: double.infinity,
-                    height: double.infinity,
-                    color: Colors.black26),
-              ),
-            ])));
+                  child: Container(
+                      alignment: Alignment.center,
+                      width: double.infinity,
+                      height: double.infinity,
+                      color: Colors.black26,
+                      child: const Text(
+                        "Fourth Container",
+                        style: TextStyle(fontSize: 25),
+                      )))
+            ]
+            )
+        )
+    );
   }
 }
