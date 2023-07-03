@@ -22,7 +22,9 @@ class MyApp extends StatelessWidget {
               title: const Text('Flutter layout demo'),
               backgroundColor: Colors.blue,
             ),
+
             body: Column(children: <Widget>[
+
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
@@ -32,7 +34,9 @@ class MyApp extends StatelessWidget {
                   child: const Text(
                     "First Container",
                     style: TextStyle(fontSize: 25),
+
                   ),
+
                 ),
               ),
               Expanded(
@@ -44,7 +48,7 @@ class MyApp extends StatelessWidget {
                   child: const Text(
                     "Second Container",
                     style: TextStyle(fontSize: 25),
-                  ),
+                  )
                 ),
               ),
               Expanded(
@@ -71,7 +75,37 @@ class MyApp extends StatelessWidget {
                       )))
             ]
             )
+
         )
+    );
+  }
+}
+
+class ElevatedButtonExample extends StatefulWidget {
+  const ElevatedButtonExample({super.key});
+
+  @override
+  State<ElevatedButtonExample> createState() => _ElevatedButtonExampleState();
+}
+
+class _ElevatedButtonExampleState extends State<ElevatedButtonExample> {
+  @override
+  Widget build(BuildContext context) {
+    final ButtonStyle style =
+    ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 20));
+
+    return Center(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          const SizedBox(height: 30),
+          ElevatedButton(
+            style: style,
+            onPressed: () {},
+            child: const Text('Enabled'),
+          ),
+        ],
+      ),
     );
   }
 }
