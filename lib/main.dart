@@ -15,68 +15,100 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter First App',
-        theme: ThemeData(useMaterial3: true),
-        home: Scaffold(
-            appBar: AppBar(
-              title: const Text('Flutter layout demo'),
-              backgroundColor: Colors.blue,
+      title: 'Flutter First App',
+      theme: ThemeData(useMaterial3: true),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Flutter layout demo'),
+          backgroundColor: Colors.blue,
+        ),
+        body: Column(children: <Widget>[
+         Row( children: [
+           Expanded(
+            child: Container(
+              alignment: Alignment.topLeft,
+              //margin: const EdgeInsets.all(10.0),
+              margin: EdgeInsets.all(20),
+              width: 5.0,
+              height: 200.0,
+              color: Colors.amber[200],
+              child:const Center(
+                child: Text(
+                  "First",
+                  style:  TextStyle(fontSize: 25,
+                      fontWeight: FontWeight.bold
+                  ),
+                ),
+              )
+
             ),
+          ),
 
-            body: Column(children: <Widget>[
-
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  width: double.infinity,
-                  height: double.infinity,
-                  color: Colors.amber[200],
-                  child: const Text(
-                    "First Container",
-                    style: TextStyle(fontSize: 25),
+          Expanded(
+            child: Container(
+                margin: EdgeInsets.all(20),
+                alignment: Alignment.topRight,
+                width: 5.0,
+                height: 200.0,
+                color: Colors.blue[200],
+                child: const Center(
+                  child:  Text(
+                    "Second",
+                    style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold
+                    ),
 
                   ),
-
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  width: double.infinity,
-                  height: double.infinity,
-                  color: Colors.blue[200],
-                  child: const Text(
-                    "Second Container",
-                    style: TextStyle(fontSize: 25),
-                  )
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  width: double.infinity,
-                  height: double.infinity,
-                  color: Colors.purple[200],
-                  child: const Text(
-                    "Third Container",
-                    style: TextStyle(fontSize: 25),
-                  ),
-                ),
-              ),
-              Expanded(
+                )
+            ),
+          ),
+   ] ),
+          Row(//ROW 3
+              children: [
+                Expanded(
                   child: Container(
-                      alignment: Alignment.center,
-                      width: double.infinity,
-                      height: double.infinity,
-                      color: Colors.black26,
-                      child: const Text(
-                        "Fourth Container",
-                        style: TextStyle(fontSize: 25),
-                      )))
-            ]
-            )
+                      margin: EdgeInsets.all(20),
+                      alignment: Alignment.bottomLeft,
+                      width: 5.0,
+                      height: 200.0,
+                      color: Colors.blue[200],
+                      child: const Center(
+                        child:  Text(
+                          "Third",
+                          style: TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold
+                          ),
 
-        )
+                        ),
+                      )
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                      margin: EdgeInsets.all(20),
+                      alignment: Alignment.bottomRight,
+                      width: 5.0,
+                      height: 200.0,
+                      color: Colors.black26,
+                      child: const Center(
+                        child:  Text(
+                          "Fourth",
+                          style: TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      )
+                  ),
+                ),
+
+              ]),
+        ],
+        ),
+
+      ),
     );
   }
 }
@@ -92,7 +124,7 @@ class _ElevatedButtonExampleState extends State<ElevatedButtonExample> {
   @override
   Widget build(BuildContext context) {
     final ButtonStyle style =
-    ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 20));
+        ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 20));
 
     return Center(
       child: Column(
