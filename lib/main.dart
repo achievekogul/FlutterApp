@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.blue,
         ),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Row(children: [
               Expanded(
@@ -127,6 +128,27 @@ class _ElevatedButtonExampleState extends State<ElevatedButtonExample> {
             child: const Text('Enabled'),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class SecondRoute extends StatelessWidget {
+  const SecondRoute({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Second Route'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: const Text('Go back!'),
+        ),
       ),
     );
   }
