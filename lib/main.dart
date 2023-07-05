@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
+
 }
 
-// With Flutter, you create user interfaces by combining "widgets"
-// You'll learn all about them (and much more) throughout this course!
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -23,79 +22,88 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.blue,
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+
           children: <Widget>[
             Row(children: [
-              Expanded(
-                child: InkWell(
-                  child: Container(
-                      alignment: Alignment.topLeft,
-                      //margin: const EdgeInsets.all(10.0),
-                      margin: EdgeInsets.all(20),
-                      width: 5.0,
-                      height: 200.0,
-                      color: Colors.amber[200],
-                      child: const Center(
-                        child: Text(
-                          "First",
-                          style: TextStyle(
-                              fontSize: 25, fontWeight: FontWeight.bold),
-                        ),
-                      ),
+
+              SizedBox(
+
+                width: 250,
+                height: 250,
+
+                child: OutlinedButton(
+                  style: ButtonStyle(
+                      backgroundColor:MaterialStatePropertyAll<Color>(Colors.green)
                   ),
-                  onTap: () {
-                    print("Tapped on container");
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const SecondRoute()),
+                    );
                   },
+                  child: const Text("English"),
+
                 ),
+
               ),
-              Expanded(
-                child: Container(
-                    margin: EdgeInsets.all(20),
-                    alignment: Alignment.topRight,
-                    width: 5.0,
-                    height: 200.0,
-                    color: Colors.blue[200],
-                    child: const Center(
-                      child: Text(
-                        "Second",
-                        style: TextStyle(
-                            fontSize: 25, fontWeight: FontWeight.bold),
-                      ),
-                    )),
+              SizedBox(
+                width: 250,
+                height: 250,
+                child: OutlinedButton(
+                  style: ButtonStyle(
+                      backgroundColor:MaterialStatePropertyAll<Color>(Colors.red)
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const SecondRoute()),
+                    );
+                  },
+                  child: const Text("English"),
+
+                ),
+
               ),
-            ]),
+            ]
+            ),
             Row(//ROW 3
                 children: [
-              Expanded(
-                child: Container(
-                    margin: EdgeInsets.all(20),
-                    alignment: Alignment.bottomLeft,
-                    width: 5.0,
-                    height: 200.0,
-                    color: Colors.blue[200],
-                    child: const Center(
-                      child: Text(
-                        "Third",
-                        style: TextStyle(
-                            fontSize: 25, fontWeight: FontWeight.bold),
+                  SizedBox(
+                    width: 250,
+                    height: 250,
+                    child: OutlinedButton(
+                      style: ButtonStyle(
+                          backgroundColor:MaterialStatePropertyAll<Color>(Colors.teal)
                       ),
-                    )),
-              ),
-              Expanded(
-                child: Container(
-                    margin: EdgeInsets.all(20),
-                    alignment: Alignment.bottomRight,
-                    width: 5.0,
-                    height: 200.0,
-                    color: Colors.black26,
-                    child: const Center(
-                      child: Text(
-                        "Fourth",
-                        style: TextStyle(
-                            fontSize: 25, fontWeight: FontWeight.bold),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const SecondRoute()),
+                        );
+                      },
+                      child: const Text("English"),
+
+                    ),
+
+                  ),
+                  SizedBox(
+                    width: 250,
+                    height: 250,
+                    child: OutlinedButton(
+                      style: ButtonStyle(
+                          backgroundColor:MaterialStatePropertyAll<Color>(Colors.lightBlueAccent)
                       ),
-                    )),
-              ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const SecondRoute()),
+                        );
+                      },
+                      child: const Text("English"),
+
+                    ),
+
+                  ),
             ]),
           ],
         ),

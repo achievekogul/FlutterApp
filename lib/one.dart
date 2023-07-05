@@ -18,6 +18,9 @@ class FirstRoute extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
+          style:ButtonStyle(
+
+          ),
           child: const Text('Open route'),
           onPressed: () {
             Navigator.push(
