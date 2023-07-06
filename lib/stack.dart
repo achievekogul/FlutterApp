@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp( MaterialApp(
+  runApp(MaterialApp(
     title: 'Navigation Basics',
     home: Index(),
   ));
@@ -10,32 +10,32 @@ void main() {
 class Index extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-        appBar:  AppBar(
+    return Scaffold(
+        appBar: AppBar(
           backgroundColor: const Color(0xFF0099a9),
         ),
         body: Column(children: <Widget>[
 
-    SizedBox(
-    width: 250,
-    height: 250,
-    child: OutlinedButton(
-style: ButtonStyle(
-    backgroundColor:MaterialStatePropertyAll<Color>(Colors.green)
-),
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const SecondRoute()),
-        );
-      },
-    child: const Text("English"),
+          SizedBox(
+            width: 250,
+            height: 250,
+            child: OutlinedButton(
+              style: ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll<Color>(Colors.green)
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SecondRoute()),
+                );
+              },
+              child: const Text("English"),
 
-    ),
+            ),
 
-    ),
+          ),
         ]
-    )
+        )
     );
   }
 }
