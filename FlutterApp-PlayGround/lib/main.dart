@@ -29,19 +29,19 @@ class MyApp extends StatelessWidget {
               Expanded(
                 child: InkWell(
                   child: Container(
-                      alignment: Alignment.topLeft,
-                      //margin: const EdgeInsets.all(10.0),
-                      margin: EdgeInsets.all(20),
-                      width: 5.0,
-                      height: 200.0,
-                      color: Colors.amber[200],
-                      child: const Center(
-                        child: Text(
-                          "First",
-                          style: TextStyle(
-                              fontSize: 25, fontWeight: FontWeight.bold),
-                        ),
+                    alignment: Alignment.topLeft,
+                    //margin: const EdgeInsets.all(10.0),
+                    margin: const EdgeInsets.all(20),
+                    width: 5.0,
+                    height: 200.0,
+                    color: Colors.amber[200],
+                    child: const Center(
+                      child: Text(
+                        "First",
+                        style: TextStyle(
+                            fontSize: 25, fontWeight: FontWeight.bold),
                       ),
+                    ),
                   ),
                   onTap: () {
                     print("Tapped on container");
@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
               ),
               Expanded(
                 child: Container(
-                    margin: EdgeInsets.all(20),
+                    margin: const EdgeInsets.all(20),
                     alignment: Alignment.topRight,
                     width: 5.0,
                     height: 200.0,
@@ -68,7 +68,7 @@ class MyApp extends StatelessWidget {
                 children: [
               Expanded(
                 child: Container(
-                    margin: EdgeInsets.all(20),
+                    margin: const EdgeInsets.all(20),
                     alignment: Alignment.bottomLeft,
                     width: 5.0,
                     height: 200.0,
@@ -83,7 +83,7 @@ class MyApp extends StatelessWidget {
               ),
               Expanded(
                 child: Container(
-                    margin: EdgeInsets.all(20),
+                    margin: const EdgeInsets.all(20),
                     alignment: Alignment.bottomRight,
                     width: 5.0,
                     height: 200.0,
