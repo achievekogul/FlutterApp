@@ -22,92 +22,83 @@ class MyApp extends StatelessWidget {
           title: const Text('Flutter layout demo'),
           backgroundColor: Colors.blue,
         ),
-        body: Column(children: <Widget>[
-         Row( children: [
-           Expanded(
-            child: Container(
-              alignment: Alignment.topLeft,
-              //margin: const EdgeInsets.all(10.0),
-              margin: EdgeInsets.all(20),
-              width: 5.0,
-              height: 200.0,
-              color: Colors.amber[200],
-              child:const Center(
-                child: Text(
-                  "First",
-                  style:  TextStyle(fontSize: 25,
-                      fontWeight: FontWeight.bold
-                  ),
-                ),
-              )
-
-            ),
-          ),
-
-          Expanded(
-            child: Container(
-                margin: EdgeInsets.all(20),
-                alignment: Alignment.topRight,
-                width: 5.0,
-                height: 200.0,
-                color: Colors.blue[200],
-                child: const Center(
-                  child:  Text(
-                    "Second",
-                    style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold
-                    ),
-
-                  ),
-                )
-            ),
-          ),
-   ] ),
-          Row(//ROW 3
-              children: [
-                Expanded(
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Row(children: [
+              Expanded(
+                child: InkWell(
                   child: Container(
+                      alignment: Alignment.topLeft,
+                      //margin: const EdgeInsets.all(10.0),
                       margin: EdgeInsets.all(20),
-                      alignment: Alignment.bottomLeft,
                       width: 5.0,
                       height: 200.0,
-                      color: Colors.blue[200],
+                      color: Colors.amber[200],
                       child: const Center(
-                        child:  Text(
-                          "Third",
+                        child: Text(
+                          "First",
                           style: TextStyle(
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold
-                          ),
-
+                              fontSize: 25, fontWeight: FontWeight.bold),
                         ),
-                      )
+                      ),
                   ),
+                  onTap: () {
+                    print("Tapped on container");
+                  },
                 ),
-                Expanded(
-                  child: Container(
-                      margin: EdgeInsets.all(20),
-                      alignment: Alignment.bottomRight,
-                      width: 5.0,
-                      height: 200.0,
-                      color: Colors.black26,
-                      child: const Center(
-                        child:  Text(
-                          "Fourth",
-                          style: TextStyle(
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold
-                          ),
-                        ),
-                      )
-                  ),
-                ),
-
-              ]),
-        ],
+              ),
+              Expanded(
+                child: Container(
+                    margin: EdgeInsets.all(20),
+                    alignment: Alignment.topRight,
+                    width: 5.0,
+                    height: 200.0,
+                    color: Colors.blue[200],
+                    child: const Center(
+                      child: Text(
+                        "Second",
+                        style: TextStyle(
+                            fontSize: 25, fontWeight: FontWeight.bold),
+                      ),
+                    )),
+              ),
+            ]),
+            Row(//ROW 3
+                children: [
+              Expanded(
+                child: Container(
+                    margin: EdgeInsets.all(20),
+                    alignment: Alignment.bottomLeft,
+                    width: 5.0,
+                    height: 200.0,
+                    color: Colors.blue[200],
+                    child: const Center(
+                      child: Text(
+                        "Third",
+                        style: TextStyle(
+                            fontSize: 25, fontWeight: FontWeight.bold),
+                      ),
+                    )),
+              ),
+              Expanded(
+                child: Container(
+                    margin: EdgeInsets.all(20),
+                    alignment: Alignment.bottomRight,
+                    width: 5.0,
+                    height: 200.0,
+                    color: Colors.black26,
+                    child: const Center(
+                      child: Text(
+                        "Fourth",
+                        style: TextStyle(
+                            fontSize: 25, fontWeight: FontWeight.bold),
+                      ),
+                    )),
+              ),
+            ]),
+          ],
         ),
-
       ),
     );
   }
@@ -137,6 +128,27 @@ class _ElevatedButtonExampleState extends State<ElevatedButtonExample> {
             child: const Text('Enabled'),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class SecondRoute extends StatelessWidget {
+  const SecondRoute({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Second Route'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: const Text('Go back!'),
+        ),
       ),
     );
   }

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MyApp());
 }
-
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
@@ -16,11 +15,21 @@ class MyApp extends StatelessWidget{
     title: const Text('Flutter layout demo'),
     backgroundColor: Colors.blue,
     ),
-    body: Container(
-   child: Text('Test',
-   textAlign:TextAlign.center),
-        // textWidthBasis:TextWidthBasis.parent)
+    body: InkWell(
+      child: Container(
+        width: 500.0,
+        padding: new EdgeInsets.fromLTRB(20.0, 40.0, 20.0, 40.0),
+        color: Colors.green,
+        child: new Column(
+            children: [
+              new Text("Ableitungen"),
+            ]
+        ),
       ),
+      onTap: () {
+        print("Tapped on container");
+      },
+    ),
     ),
     );
   }
