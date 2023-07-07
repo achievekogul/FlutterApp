@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
-
 }
 
 class MyApp extends StatelessWidget {
@@ -21,96 +20,36 @@ class MyApp extends StatelessWidget {
           title: const Text('Flutter layout demo'),
           backgroundColor: Colors.blue,
         ),
+
         body: Column(
-
           children: <Widget>[
-            Row(children: [
-
-              SizedBox(
-
-                width: 250,
-                height: 250,
-
+            Row(
+                children: [
+        SizedBox(
+                width: 200,
+                height: 100,
                 child: OutlinedButton(
-                  style: ButtonStyle(
-                      backgroundColor:MaterialStatePropertyAll<Color>(Colors.green)
-                  ),
+                  style: const ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.green)),
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const SecondRoute()),
+                      MaterialPageRoute(
+                          builder: (context) => const SecondRoute()),
                     );
                   },
                   child: const Text("English"),
-
                 ),
-
-              ),
-              SizedBox(
-                width: 250,
-                height: 250,
-                child: OutlinedButton(
-                  style: ButtonStyle(
-                      backgroundColor:MaterialStatePropertyAll<Color>(Colors.red)
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const SecondRoute()),
-                    );
-                  },
-                  child: const Text("English"),
-
-                ),
-
               ),
             ]
             ),
-            Row(//ROW 3
-                children: [
-                  SizedBox(
-                    width: 250,
-                    height: 250,
-                    child: OutlinedButton(
-                      style: ButtonStyle(
-                          backgroundColor:MaterialStatePropertyAll<Color>(Colors.teal)
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const SecondRoute()),
-                        );
-                      },
-                      child: const Text("English"),
-
-                    ),
-
-                  ),
-                  SizedBox(
-                    width: 250,
-                    height: 250,
-                    child: OutlinedButton(
-                      style: ButtonStyle(
-                          backgroundColor:MaterialStatePropertyAll<Color>(Colors.lightBlueAccent)
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const SecondRoute()),
-                        );
-                      },
-                      child: const Text("English"),
-
-                    ),
-
-                  ),
-            ]),
           ],
         ),
       ),
     );
   }
 }
+
 
 class ElevatedButtonExample extends StatefulWidget {
   const ElevatedButtonExample({super.key});

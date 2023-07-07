@@ -17,7 +17,7 @@ class WebApp extends StatelessWidget {
                   Color.fromRGBO(177, 33, 57, 1),
                   Color.fromRGBO(20, 10, 27, 1)
                 ])),
-                child: const Column(
+                child:  Column(
                   children: [
                     Text(
                       'Home Page',

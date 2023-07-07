@@ -16,7 +16,9 @@ class MyApp extends StatelessWidget{
     backgroundColor: Colors.blue,
     ),
     body: InkWell(
-      child: Container(
+      child: Padding(
+        padding: EdgeInsets.symmetric(vertical: 20, horizontal:40),
+        child: Container(
         width: 500.0,
         padding: new EdgeInsets.fromLTRB(20.0, 40.0, 20.0, 40.0),
         color: Colors.green,
@@ -25,6 +27,7 @@ class MyApp extends StatelessWidget{
               new Text("Ableitungen"),
             ]
         ),
+      ),
       ),
       onTap: () {
         print("Tapped on container");
