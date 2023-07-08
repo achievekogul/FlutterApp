@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 
-
 class NavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        return DesktopNavbar();
+        return const DesktopNavbar();
       },
     );
   }
 }
 
 class DesktopNavbar extends StatelessWidget {
+  const DesktopNavbar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -56,14 +57,13 @@ class DesktopNavbar extends StatelessWidget {
                 MaterialButton(
                   shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                 color: Colors.brown,
+                  color: Colors.brown,
                   onPressed: () {},
                   child: const Text(
                     "Get Started",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
-
               ],
             ),
           ],
