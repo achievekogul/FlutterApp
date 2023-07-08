@@ -12,24 +12,17 @@ class WebApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-          body: Container(
-        decoration: const BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight,
-                colors: [
-              Color.fromRGBO(177, 33, 57, 1),
-              Color.fromRGBO(20, 10, 27, 1)
-            ])
-        ),
-              child: Column(
-                  children: <Widget>[
-                    NavBar()
-                  ]
-              )
-      ),
-      )
-    );
+        home: Scaffold(
+      body: Container(
+          decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: [
+                Color.fromRGBO(177, 33, 57, 1),
+                Color.fromRGBO(20, 10, 27, 1)
+              ])),
+          child: Column(children: <Widget>[NavBar()])),
+    ));
   }
 }
