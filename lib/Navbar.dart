@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class NavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -15,9 +16,9 @@ class DesktopNavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical:20, horizontal:40),
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
       child: Container(
-        constraints: BoxConstraints(maxWidth: 1500),
+        constraints: const BoxConstraints(maxWidth: 1500),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
@@ -25,28 +26,44 @@ class DesktopNavbar extends StatelessWidget {
               'My profile',
               textAlign: TextAlign.left,
               style: TextStyle(
-                  fontWeight: FontWeight.bold, color: Colors.white, fontSize: 30),
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontSize: 30),
             ),
             Row(
-              children: const [
-                Text(
+              children: <Widget>[
+                const Text(
                   "Home",
                   style: TextStyle(color: Colors.white),
                 ),
-                SizedBox(
-                  width:30,
+                const SizedBox(
+                  width: 30,
                 ),
-                Text(
+                const Text(
                   "About Us",
                   style: TextStyle(color: Colors.white),
                 ),
-                SizedBox(
-                  width:30,
+                const SizedBox(
+                  width: 30,
                 ),
-                Text(
+                const Text(
                   "Portfolio",
                   style: TextStyle(color: Colors.white),
-                )
+                ),
+                const SizedBox(
+                  width: 30,
+                ),
+                MaterialButton(
+                  shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                 color: Colors.brown,
+                  onPressed: () {},
+                  child: const Text(
+                    "Get Started",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+
               ],
             ),
           ],
