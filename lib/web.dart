@@ -20,8 +20,8 @@ class WebApp extends StatelessWidget {
                   begin: Alignment.centerLeft,
                   end: Alignment.centerRight,
                   colors: [
-                Color.fromRGBO(177, 33, 57, 1),
-                Color.fromRGBO(20, 10, 27, 1)
+                Color.fromRGBO(161, 43, 127, 1.0),
+                Color.fromRGBO(41, 25, 58, 1.0)
               ])),
           child: Column(children: <Widget>[
             NavBar(),
